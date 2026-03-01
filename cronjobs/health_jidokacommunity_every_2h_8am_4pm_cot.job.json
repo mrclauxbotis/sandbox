@@ -1,0 +1,19 @@
+{
+  "name": "Healthcheck jidokacommunity cada 2h (8am-4pm COT)",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 8-16/2 * * *",
+    "tz": "America/Bogota"
+  },
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Haz una solicitud GET a https://health.jidokacommunity.org/ y responde solo con: health.jidokacommunity.org -> <resultado>"
+  },
+  "delivery": {
+    "mode": "announce",
+    "channel": "telegram",
+    "to": "1497039310"
+  },
+  "enabled": true
+}

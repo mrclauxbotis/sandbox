@@ -31,3 +31,12 @@ From OpenClaw, create this job with:
   }
 }
 ```
+
+## Active job: Healthcheck jidokacommunity
+
+Definition file:
+- `health_jidokacommunity_every_2h_8am_4pm_cot.job.json`
+
+Schedule:
+- Every 2 hours from 8:00 to 16:00 (COT / America/Bogota)
+- Cron expression: `0 8-16/2 * * *`
