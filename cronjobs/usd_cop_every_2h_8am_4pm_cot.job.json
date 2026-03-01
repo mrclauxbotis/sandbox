@@ -1,0 +1,19 @@
+{
+  "name": "USD/COP cada 2h (8am-4pm COT)",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 8-16/2 * * *",
+    "tz": "America/Bogota"
+  },
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Consulta el tipo de cambio USD a COP usando https://open.er-api.com/v6/latest/USD y toma rates.COP. Responde SOLO en este formato exacto: USD -> COP: <valor en COP>"
+  },
+  "delivery": {
+    "mode": "announce",
+    "channel": "telegram",
+    "to": "1497039310"
+  },
+  "enabled": true
+}
